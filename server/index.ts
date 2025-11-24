@@ -4,6 +4,15 @@ import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
 
+import session from "express-session";
+
+app use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false, } 
+}));
+
 declare module 'http' {
   interface IncomingMessage {
     rawBody: unknown
