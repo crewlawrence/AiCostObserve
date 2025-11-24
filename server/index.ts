@@ -6,7 +6,7 @@ const app = express();
 
 import session from "express-session";
 
-app use(session({
+app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true,
