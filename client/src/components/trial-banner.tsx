@@ -58,7 +58,7 @@ export function TrialBanner() {
     );
   }
 
-  if (billingStatus.subscriptionStatus === "active") || billingstatus.stripeSubscriptionId) {
+  if (billingStatus.subscriptionStatus === "active") {
     return null;
   }
 
